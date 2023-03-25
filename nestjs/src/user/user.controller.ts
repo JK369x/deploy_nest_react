@@ -73,7 +73,7 @@ export class UserController {
                     to: email,
                     from: 'rmuttlearn0612@gmail.com',
                     subject: ' verify your email',
-                    text: `Hello, please click on this link to verify your email address: http://localhost:8000/user/verifyemployee/${verificationToken}`,
+                    text: `Hello, please click on this link to verify your email address: http://141.98.17.47:8000/user/verifyemployee/${verificationToken}`,
                 })
 
                 const data_register = await this.userService.Register(data, verificationToken)
@@ -83,7 +83,7 @@ export class UserController {
                     to: email,
                     from: 'rmuttlearn0612@gmail.com',
                     subject: ' verify your email',
-                    text: `Hello, please click on this link to verify your email address: http://localhost:8000/user/verify/${verificationToken}`,
+                    text: `Hello, please click on this link to verify your email address: http://141.98.17.47:8000/user/verify/${verificationToken}`,
                 })
 
                 const data_register = await this.userService.Register(data, verificationToken)
@@ -108,7 +108,7 @@ export class UserController {
             await collection_account.doc(data[0]).update({
                 verify_email: true
             })
-            return res.redirect('http://localhost:5173/loginsuccess');
+            return res.redirect('http://141.98.17.47/loginsuccess');
         } else {
             console.log('not found user')
             return false
@@ -128,7 +128,7 @@ export class UserController {
             await collection_account.doc(data[0]).update({
                 verify_email: true
             })
-            return res.redirect('http://localhost:5173/adminlogin');
+            return res.redirect('http://141.98.17.47/adminlogin');
         } else {
             console.log('not found user')
             return false
