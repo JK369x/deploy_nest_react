@@ -1,18 +1,10 @@
-import { collection_score, collection_account, db } from './../database/firebase/firebase_config';
-import { getDoc, query } from 'firebase/firestore';
-import { ref } from 'firebase/storage';
-import { async } from '@firebase/util';
-import { Quiz } from '@mui/icons-material';
-import { getDocs } from 'firebase/firestore';
-import { doc } from 'firebase/firestore';
-import { collection } from 'firebase/firestore';
+import { collection_account } from './../database/firebase/firebase_config';
+
 import { Injectable, InternalServerErrorException, HttpException, Param, UnauthorizedException } from '@nestjs/common';
-import { AddCourseDTO } from './dto/course_data.dto';
 import { collection_course, collection_category } from 'src/database/firebase/firebase_config';
 import { UserService } from 'src/user/user.service';
 import { JwtService } from '@nestjs/jwt';
-import { ResultOption } from 'Guards/jwtInterface';
-import { CategoryService } from 'src/category/category.service';
+
 import * as moment from 'moment';
 
 
