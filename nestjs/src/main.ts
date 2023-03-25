@@ -17,7 +17,7 @@ async function bootstrap() {
     .addTag('cats')
     .build();
   app.enableCors({
-    origin: ['*'],
+    origin: ['http://141.98.17.47', 'https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_province_with_amphure_tambon.json'],
     credentials: true,
   });
   const document = SwaggerModule.createDocument(app, config);
