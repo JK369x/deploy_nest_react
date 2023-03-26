@@ -15,6 +15,7 @@ export class CourseController {
     @Post('addcourse')
     async AddCourse(@Body() addcourse: AddCourseDTO) {
         console.log('created....')
+        console.log('test')
         const user = await this.userService.getUser()
         return await this.courseService.addCourse(addcourse, user.payload)
     }
